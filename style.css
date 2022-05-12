@@ -1,0 +1,63 @@
+* {
+  font-family: 'sans';
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border-radius: .25em;
+  transition: 0.5s ease;
+  color: #AAA6A6;
+}
+
+body {
+  background: #121212;
+  display: grid;
+}
+
+/* WordList */
+.main {
+  padding: 2em;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* WordCards */
+div {
+  display: grid;
+  grid-gap: 1em;
+  padding: 2em;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .25);
+  background: #151515;
+}
+
+h3 {
+  padding: 1em 0;
+  color: #E8E3E3;
+}
+
+b {
+  color: #E8E3E3;
+}
+
+p {
+  padding: 0 1em;
+}
+
+button {
+  padding: 1.5em 2em;
+  border: none;
+  /* background: #151515; */
+  background: #121212;
+  color: #AAA6A6;
+  font-size: 1em;
+}
+
+button:hover {
+  color: #E8E3E3;
+}
+
+@media screen and (max-width: 1000px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
