@@ -14,8 +14,10 @@ if (localStorage.getItem("Dict") === null) {
 const more = document.querySelector('.more');
 more.addEventListener('click', function() { getWord(3); });
 
-const saved = document.querySelector('.saved');
-saved.addEventListener('click', toggleSec);
+const home = document.querySelector('.home');
+home.addEventListener('click', homeSec);
+const saves = document.querySelector('.saves');
+saves.addEventListener('click', saveSec);
 
 const clear = document.querySelector('.clear');
 clear.addEventListener('click', clearList);
@@ -49,6 +51,7 @@ function toggle(event) {
   if (a.innerHTML === "Save") {
     a.innerHTML = "Saved";
     save(a);
+    load();
   } else {
     a.innerHTML = "Save";
     remove(a);
@@ -85,15 +88,19 @@ function load() {
   })
 }
 
-function toggleSec() {
-  main.classList.toggle('hide');
-  list.classList.toggle('hide');
-  more.classList.toggle('hide');
-  clear.classList.toggle('hide');
-  if (saved.innerHTML === "Saves") {
-    saved.innerHTML = "Home";
-  } else {
-    saved.innerHTML = "Saves";
-  } 
-  load();
-} 
+function homeSec() {
+  main.classList.remove('hide');
+  list.classList.add('hide');
+  more.classList.remove('hide');
+  clear.classList.add('hide');
+  home.classList.add('active');
+  saves.classList.remove('active');
+}
+function saveSec() {
+  clear.classList.remove('hide');
+  main.classList.add('hide');
+  list.classList.remove('hide');
+  more.classList.add('hide');
+  home.classList.remove('active');
+  saves.classList.add('active');
+}

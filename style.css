@@ -36,10 +36,6 @@ section {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.hide {
-  display: none;
-}
-
 /* WordCards */
 div {
   display: grid;
@@ -75,6 +71,14 @@ button:hover {
 
 .save {
   background: #181818;
+}
+
+.hide {
+  display: none;
+}
+
+.active {
+  color: #E8E3E3;
 }
 
 /* Footer */
